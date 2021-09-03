@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			
+			<title>Formulário de cadastro de Notícia</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		</head>
+	<body>
+
+	<div>
+		<h1>Adicionar notícia</h1>
+		
+		<form action="noticias/salvar" method="POST">
+			
+			<label>Título</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Insira um título" />
+			<br/>
+			<label>Notícia</label>
+			<br/>
+			<textarea id="noticia" name="noticia" placeholder="Insira a notícia" rows="5" cols="30"></textarea>
+			<br/>
+			<input type="submit" value="Enviar"/>
+
+		</form>
+	</div>
+
+	</body>
+</html>
