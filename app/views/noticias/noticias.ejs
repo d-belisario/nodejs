@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			
+			<title>Notícias</title>
+		</head>
+	<body>
+
+		<h1>Notícias</h1>
+		<br/>
+		<table border="1">
+			<tr>
+				<th>Título</th>
+				<th>Conteúdo</th>
+			</tr>
+			<% for(i = 0; i < noticias.length; i++) {%>
+				<tr>
+					<td><%= noticias[i].titulo %></td>
+					<td><%= noticias[i].noticias %></td>
+				</tr>
+			<% } %>
+		</table>
+
+	</body>
+</html>
