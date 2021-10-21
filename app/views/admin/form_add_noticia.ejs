@@ -9,15 +9,34 @@
 
 	<div>
 		<h1>Adicionar notícia</h1>
+	
+
+		<% if(typeof jErros !== 'undefined') { %>
 		
+			<% for(i = 0; i < jErros.length; i++){ %>
+				<div class="alert alert-danger">
+					<%= jErros[i].msg %>
+				</div>
+			<% } %>
+
+		<% } %>
 		<form action="noticias/salvar" method="POST" style="margin: 10px">
 			
 			<label>Título</label>
-			<input type="text" id="titulo" name="titulo" placeholder="Insira um título" />
+			<input type="text" id="titulo" value="<%= noticia.titulo ? noticia.titulo : '' %>" name="titulo" placeholder="Insira um título" />
+			<label>Data da notícia</label>
+			<input type="date" id="data_noticia" name="data_noticia" placeholder="Insira a data" />
+			<br/>
+			<label>Resumo</label>
+			<br/>
+			<textarea id="resumo" name="resumo" placeholder="Insira um resumo" rows="5" cols="20"></textarea>
+			<br/>
+			<label>Autor</label>
+			<input type="text" id="autor" name="autor" placeholder="Insira o autor" />
 			<br/>
 			<label>Notícia</label>
 			<br/>
-			<textarea id="noticia" name="noticia" placeholder="Insira a notícia" rows="5" cols="30"></textarea>
+			<textarea id="noticia" name="noticias" placeholder="Insira a notícia" rows="5" cols="30"></textarea>
 			<br/>
 			<input type="submit" value="Enviar"/>
 
