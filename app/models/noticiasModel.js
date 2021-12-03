@@ -17,6 +17,10 @@ Noticias.prototype.salvarNoticia = function(noticia, callback){
 
 };
 
+Noticias.prototype.getNoticiasHome = function(callback){
+	this._connection.query('SELECT * FROM noticias ORDER BY id_noticias DESC LIMIT 5', callback);
+}
+
 module.exports = function(){
 
 	return Noticias;
